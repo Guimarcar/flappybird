@@ -5,6 +5,7 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public GameController controller;
+    public AudioSource audioScore;
 
     void Start()
     {
@@ -13,6 +14,7 @@ public class Score : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
+        audioScore.Play();
         controller.score++;
         controller.scoreText.text = controller.score.ToString();
     }
