@@ -9,6 +9,7 @@ public class Bird : MonoBehaviour
     private Rigidbody2D rig;
 
     public GameObject gameOver;
+    public GameObject score;
     public AudioSource audioAsa;
     public AudioSource audioBatida;
 
@@ -32,6 +33,7 @@ public class Bird : MonoBehaviour
     {
         audioBatida.Play();
         gameOver.SetActive(true);
+        score.SetActive(false);
         Time.timeScale = 0;
     }
 }
